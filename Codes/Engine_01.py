@@ -40,5 +40,4 @@ class StartPage(tk.Frame):
         label.pack(padx=10, pady=10)
 
 program = Engine()
-
 program.mainloop()

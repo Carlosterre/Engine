@@ -35,6 +35,7 @@ class Engine(tk.Tk):
 class StartPage(tk.Frame):
     
     def __init__(self, parent, controller):
+        
         tk.Frame.__init__(self, parent)
         label = tk.Label(self, text='This is the start page', font=FONT)
         label.pack(padx=10, pady=10)

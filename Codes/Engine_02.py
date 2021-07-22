@@ -1,4 +1,4 @@
-# ENGINE
+# ENGINE_02
 # Carlos Terreros Sanchez
 
 # Import modules
@@ -44,7 +44,7 @@ class StartPage(tk.Frame):
         label.pack(padx=10, pady=10)
         
         button = tk.Button(self, text='Go to page 1',
-                           command=lambda: qp('This is passig vars through'))
+                           command=lambda: qp('This is passing vars through'))
         button.pack()
 
 program = Engine()

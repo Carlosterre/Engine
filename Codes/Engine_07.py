@@ -43,7 +43,7 @@ class Engine(tk.Tk):
         
         frame = self.frames[cont]
         frame.tkraise()
-
+        
 class Welcome(tk.Frame):
     
     def __init__(self, parent, controller):
@@ -54,7 +54,7 @@ class Welcome(tk.Frame):
         
         button = ttk.Button(self, text='Go to data',
                             command=lambda: controller.show_frame(Data))
-
+        
         button.pack()
         
 class Data(tk.Frame):
@@ -87,15 +87,15 @@ class Graphs(tk.Frame):
         f = Figure(figsize=(5,5), dpi=100)
         a = f.add_subplot(111)
         a.plot([1, 2, 3, 4, 5, 6, 7, 8], [5, 6, 1, 3, 8, 9, 3, 5])
-
+        
         canvas = FigureCanvasTkAgg(f, self)
         canvas.draw()
         canvas.get_tk_widget().pack(side=tk.BOTTOM, fill=tk.BOTH, expand=True)
-
+        
         toolbar = NavigationToolbar2Tk(canvas, self)
         toolbar.update()
         
         canvas._tkcanvas.pack(side=tk.TOP, fill=tk.BOTH, expand=True)
-
+        
 program = Engine()
 program.mainloop()

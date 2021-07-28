@@ -31,10 +31,10 @@ class Engine(tk.Tk):
         
         frame = self.frames[cont]
         frame.tkraise()
-
+        
 def qp(quickprint):
     print(quickprint)
-
+    
 class StartPage(tk.Frame):
     
     def __init__(self, parent, controller):
@@ -46,6 +46,6 @@ class StartPage(tk.Frame):
         button = tk.Button(self, text='Go to page 1',
                            command=lambda: qp('This is passing vars through'))
         button.pack()
-
+        
 program = Engine()
 program.mainloop()

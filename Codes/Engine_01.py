@@ -31,7 +31,7 @@ class Engine(tk.Tk):
         
         frame = self.frames[cont]
         frame.tkraise()
-
+        
 class StartPage(tk.Frame):
     
     def __init__(self, parent, controller):
@@ -39,6 +39,6 @@ class StartPage(tk.Frame):
         tk.Frame.__init__(self, parent)
         label = tk.Label(self, text='This is the start page', font=FONT)
         label.pack(padx=10, pady=10)
-
+        
 program = Engine()
 program.mainloop()

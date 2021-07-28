@@ -38,7 +38,7 @@ class Engine(tk.Tk):
         filemenu.add_separator()
         filemenu.add_command(label='Exit', command=self.destroy)
         menubar.add_cascade(label='Menu', menu=filemenu)
-
+        
         tk.Tk.config(self, menu=menubar)
         
         self.frames = {}
@@ -54,7 +54,7 @@ class Engine(tk.Tk):
         
         frame = self.frames[cont]
         frame.tkraise()
-
+        
 class Welcome(tk.Frame):
     
     def __init__(self, parent, controller):
@@ -94,20 +94,20 @@ class Graphs(tk.Frame):
         f = Figure(figsize=(5,5), dpi=100)
         a = f.add_subplot(111)
         a.plot([1, 2, 3, 4, 5, 6, 7, 8], [5, 6, 1, 3, 8, 9, 3, 5])
-
+        
         canvas = FigureCanvasTkAgg(f, self)
         canvas.draw()
         canvas.get_tk_widget().pack(side=tk.BOTTOM, fill=tk.BOTH, expand=True)
-
+        
         button = ttk.Button(self, text='Back to data',
                             command=lambda: controller.show_frame(Data))
         button.pack()
-
+        
         toolbar = NavigationToolbar2Tk(canvas, self)
         toolbar.update()
         
         canvas._tkcanvas.pack(side=tk.TOP, fill=tk.BOTH, expand=True)
-
+        
 def popupmsg(msg):
     
     popup = tk.Tk()
@@ -119,7 +119,7 @@ def popupmsg(msg):
     button.pack()
     
     popup.mainloop()
-
+    
 program = Engine()
 program.geometry("1280x720")
 program.mainloop()

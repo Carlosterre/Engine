@@ -39,7 +39,7 @@ class Engine(tk.Tk):
         
         frame = self.frames[cont]
         frame.tkraise()
-
+        
 class StartPage(tk.Frame):
     
     def __init__(self, parent, controller):
@@ -50,14 +50,14 @@ class StartPage(tk.Frame):
         
         button1 = ttk.Button(self, text='Go to page 1',
                             command=lambda: controller.show_frame(PageOne))
-
+        
         button1.pack()
         
         button2 = ttk.Button(self, text='Go to page 2',
                             command=lambda: controller.show_frame(PageTwo))
         
         button2.pack()
-
+        
 class PageOne(tk.Frame):
     
     def __init__(self, parent, controller):
@@ -68,7 +68,7 @@ class PageOne(tk.Frame):
         
         button1 = ttk.Button(self, text='Go to start page',
                             command=lambda: controller.show_frame(StartPage))
-
+        
         button1.pack()
         
         button2 = ttk.Button(self, text='Go to page 2',
@@ -86,13 +86,13 @@ class PageTwo(tk.Frame):
         
         button1 = ttk.Button(self, text='Go to page 1',
                             command=lambda: controller.show_frame(PageOne))
-
+        
         button1.pack()
         
         button2 = ttk.Button(self, text='Start page',
                             command=lambda: controller.show_frame(StartPage))
         
         button2.pack()
-
+        
 program = Engine()
 program.mainloop()
